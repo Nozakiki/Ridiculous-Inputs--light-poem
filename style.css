@@ -1,0 +1,150 @@
+.container {
+  background-color: #1A1A1A;
+  width: 1512px;
+  height: 982px;
+}
+
+.bulb1, .bulb2, .bulb3 {
+  position: absolute;
+}
+
+.bulb1 { left: 306px; }
+.bulb2 { left: 656px; }
+.bulb3 { left: 1006px; }
+
+.pon {
+  position: absolute;
+  left: 150px;
+  top: 100px;
+  transition: all 1s;
+}
+
+.poff {
+  position: absolute;
+  left: 1362px;
+  top: 100px;
+  transition: all 1s;
+}
+.text1 {
+  position: absolute;
+  left:306px;
+   top: 350px;
+
+}
+.text2 {
+  position: absolute;
+  left:656px;
+   top: 400px;
+ 
+}
+.text3 {
+  position: absolute;
+  left:1006px;
+   top: 500px;
+ 
+}
+.text4 {
+  position: absolute;
+  left:1006px;
+   top: 700px;
+ 
+  
+}
+.text1:hover path {
+  fill:#FFFDEC;
+}
+.text2:hover path {
+  fill:#FFFDEC;
+}
+.text3:hover path {
+  fill:#FFFDEC;
+}
+.text4:hover path {
+  fill:#FFFDEC;
+}
+}
+.poff:hover path {
+  stroke: #FF4242;
+}
+
+.pon:hover path {
+  stroke: #15FF1E;
+}
+
+.container[data-active="true"] {
+  background-color: #FFFDEC;
+}
+
+.container[data-active="true"] .blub svg path {
+  fill: #1A1A1A;
+}
+
+.container[data-active="true"] .pon svg path {
+  stroke: #1A1A1A;
+}
+
+.container[data-active="true"] .blub svg rect {
+  fill: #1A1A1A; /* Change the color of all rect elements */
+}
+
+.container[data-active="true2"] {
+  background-color: #1A1A1A;
+}
+
+.container[data-active="true2"] .blub svg path {
+  fill: #FFFDEC;
+}
+
+.container[data-active="true2"] .poff svg path {
+  stroke: #FFC9C9;
+}
+
+/* lights out animation  */
+@keyframes shrinkAndDisappear {
+  0% {
+    width: 30px;
+    height: 30px;
+    opacity: 100;
+  }
+  100% {
+    width: 0;
+    height: 0;
+    opacity: 50;
+  }
+}
+
+.circle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.shrinking-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #FFFDEC;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.circle1 {
+  top: 180px;
+  left: 30%;
+}
+
+.circle2 {
+  top: 180px;
+  left: 53.5%;
+}
+
+.circle3 {
+  top: 180px;
+  left: 76.5%;
+}
+
+/* Additional styles for animation */
+.shrinking-circle.animate {
+  animation: shrinkAndDisappear 5s linear forwards;
+}
+
